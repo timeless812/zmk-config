@@ -27,29 +27,29 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  |  |  |  |  |  |                   |   | 7 | 8 | 9 |  |  |
-// |  |  |  |  |  |  |                   |   | 4 | 6 | 7 |  |  |
-// |  |  |  |  |  |  |                   | 0 | 1 | 2 | 3 |  |  |
-//          |  |  |  |                   |   |   |   |
+// |  |  |  |   |   | * |                   | + | 7 | 8 | 9 |  |  |
+// |  |  |  | ( | ) | = |                   | - | 4 | 6 | 7 |  |  |
+// |  |  |  |   |   |   |                   | 0 | 1 | 2 | 3 |  |  |
+//          |   |   |   |                   |   |   |   |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans         &trans &kp N7 &kp N8 &kp N9 &trans &trans
-   &trans &trans &trans &trans &trans &trans         &trans &kp N4 &kp N5 &kp N6 &trans &trans
-   &trans &trans &trans &trans &trans &trans         &kp N0 &kp N1 &kp N2 &kp N3 &trans &trans
-                        &trans &trans &trans         &trans &trans &trans
+   &trans &trans &trans &trans &trans &kp KP_MULTIPLY                 &kp KP_PLUS &kp N7 &kp N8 &kp N9 &trans &trans
+   &trans &trans &trans &kp KP_LPAR &kp KP_RPAR &kp KP_EQUAL          &kp KP_MINUS &kp N4 &kp N5 &kp N6 &trans &trans
+   &trans &trans &trans &trans &trans &trans                          &kp N0 &kp N1 &kp N2 &kp N3 &trans &trans
+                        &trans &trans &trans                          &trans &trans &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  |  |  |  |  |  |                   |  |   | u |   |  |  |
-// |  |  |  |  |  |  |                   |  | l | d | r |  |  |
-// |  |  |  |  |  |  |                   |  |   |   |   |  |  |
-//          |  |  |  |                   |  |   |   |
+// |  |  |  | volu | play | next |                   |  | prsc | u | del |  |  |
+// |  |  |  | vold | mute | prev |                   |  |  l   | d |  r  |  |  |
+// |  |  |  |      |      |      |                   |  |      |   |     |  |  |
+//          |      |      |      |                   |  |      |   |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans         &trans &trans &kp UP &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans         &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
-   &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-                        &trans &trans &trans         &trans &trans &trans
+   &trans &trans &trans &kp K_VOL_UP &kp K_PP &kp K_NEXT     &trans &kp PSCRN &kp UP &kp DEL &trans &trans
+   &trans &trans &trans &kp K_VOL_DN &kp K_MUTE &kp K_PREV   &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
+   &trans &trans &trans &trans &trans &trans                 &trans &trans &trans &trans &trans &trans
+                        &trans &trans &trans                 &trans &trans &trans
                         >;
                 };
         };
